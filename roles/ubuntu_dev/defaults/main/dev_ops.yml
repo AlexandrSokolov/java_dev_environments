@@ -1,0 +1,24 @@
+---
+dev_ops_packages:
+
+  - name: Guest Additions - build-essential,
+    package: build-essential
+
+  - name: Guest Additions - dkms,
+    package: dkms
+
+  - name: Guest Additions - linux-header,
+    package: linux-headers-${pipe}
+    pipe: uname -r
+
+  - name: Guest Additions - virtualbox-guest-x11,
+    package: virtualbox-guest-x11
+
+  - name: Guest Additions - virtualbox-guest-dkms,
+    package: virtualbox-guest-dkms
+
+  - name: Guest Additions - virtualbox-guest-utils,
+    package: virtualbox-guest-utils
+
+  - name: Guest Additions - virtualbox-guest-additions-iso,
+    package: virtualbox-guest-additions-iso

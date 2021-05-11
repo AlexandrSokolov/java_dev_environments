@@ -1,0 +1,11 @@
+---
+- hosts: all
+
+# do not become!!!
+#  become: yes
+
+  tasks:
+
+    - include_role:
+        name: ubuntu_dev
+        tasks_from: clone_git_projects

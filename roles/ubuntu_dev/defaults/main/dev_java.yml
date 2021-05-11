@@ -1,0 +1,22 @@
+---
+dev_packages:
+
+  - name: Java 8 OpenJdk
+    repo: "ppa:openjdk-r/ppa"
+    package: openjdk-8-jdk
+
+  - name: IntelliJ IDEA Ultimate Edition
+    snap: intellij-idea-ultimate
+    classic: yes
+
+  - name: VisualVM
+    package: visualvm
+
+  - name: Maven
+    package: maven
+
+  - name: Git
+    package: git
+
+  - name: Subversion
+    package: subversion

@@ -1,0 +1,7 @@
+---
+bashrc_env:
+
+  - key: HISTSIZE
+    value : -1
+  - key: HISTFILESIZE
+    value : -1

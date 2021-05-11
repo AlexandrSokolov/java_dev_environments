@@ -1,0 +1,36 @@
+---
+- name: Install packages
+  include_tasks: install_package.yml
+  with_flattened:
+    - "{{ system_packages }}"
+#    - "{{ media_packages }}"  not needed for dev box inside virtual machine
+    - "{{ dev_ops_packages }}"
+    - "{{ dev_packages }}"
+    - "{{ my_sql_packages }}"
+
+- name: Update all packages
+  apt: upgrade=yes
+
+- name: "Copy inputrc for {{user}}"
+  copy:
+    src: files/inputrc
+    dest: "/home/{{user}}/.inputrc"
+    owner: "{{user}}"
+    group: "{{user}}"
+
+- name: Set environment via bashrc
+  lineinfile:
+    dest: "/home/{{user}}/.bashrc"
+    regexp: "^{{ item.key }}"
+    line: "{{ item.key }}={{ item.value}}"
+  with_items: "{{ bashrc_env }}"
+
+- name: Update vm options in IntelliJ Idea
+  include_tasks: idea64_vmoptions.yml
+
+- name: Configuration via commands
+  command: "{{ item }}"
+  with_items: "{{ commands }}"
+
+- name: Restart dev VirtualBox machine
+  command: "- shutdown -r now"

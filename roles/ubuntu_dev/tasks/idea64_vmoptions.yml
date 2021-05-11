@@ -1,0 +1,48 @@
+---
+- name: Get IntelliJ Idea version file
+  fetch:
+    src: /snap/intellij-idea-ultimate/current/product-info.json
+    dest: ".{{user}}/" # put this file into the generated folder
+    flat: true
+
+- name: Extract IntelliJ Idea Product Info
+  set_fact:
+    intelliJIdeaProductInfo: "{{ lookup('file','.{{user}}/product-info.json') | from_json }}"
+
+- name: Extract Version
+  set_fact:
+    intelliJIdeaVersion: '{{ intelliJIdeaProductInfo.version.split(".")[0] }}.{{ intelliJIdeaProductInfo.version.split(".")[1] }}'
+
+- name: Set IntelliJIdea Folder Name
+  set_fact:
+    IntelliJIdeaFolder: 'IntelliJIdea{{ intelliJIdeaVersion }}'
+
+- name: Create directory if they don't exist
+  file:
+    path: "{{ item }}"
+    state: directory
+    owner: "{{ user }}"
+    group: "{{ user }}"
+    mode: 0775
+  with_items:
+    - "/home/{{ user }}/.config/JetBrains/{{ IntelliJIdeaFolder }}"
+
+- name: Copy original remote idea64.vmoptions to remote {{ IntelliJIdeaFolder }}
+  copy:
+    remote_src: True
+    src: /snap/intellij-idea-ultimate/current/bin/idea64.vmoptions
+    dest: "/home/{{ user }}/.config/JetBrains/{{ IntelliJIdeaFolder }}/idea64.vmoptions"
+    owner: "{{ user }}"
+    group: "{{ user }}"
+
+- name: Update values in idea64.vmoptions
+  lineinfile:
+    dest: "/home/{{ user }}/.config/JetBrains/{{ IntelliJIdeaFolder }}/idea64.vmoptions"
+    regexp: "^{{ item.key }}"
+    line: "{{ item.key }}{{ item.value}}" #without = between key and value!
+  with_items: "{{ intellij_idea_options }}"
+
+- name: Remove if exist folder
+  file:
+    state: absent
+    path: ".{{user}}/product-info.json"

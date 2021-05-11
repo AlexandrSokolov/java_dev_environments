@@ -1,0 +1,32 @@
+---
+- debug:
+    msg: "Handle package item: {{ item }}"
+    verbosity: 1
+
+- name: "Add custom repository keys for packages"
+  apt_key:
+    url: "{{ item.apt_key }}"
+    state: present
+  when: item.apt_key is defined
+
+- name: "Add custom repositories for packages"
+  apt_repository: repo='{{ item.repo }}'
+  when: item.repo is defined
+
+- name: Update apt
+  apt: update_cache=yes
+  when: item.repo is defined
+
+- name: Pipe-based packages installation (works only we get a single value from pipe)
+  apt: name='{{ item.package | replace('${pipe}', lookup('pipe', item.pipe)) }}' state=latest
+  when: item.pipe is defined
+
+- name: Simple packages installation
+  apt: name='{{ item.package }}' state=latest
+  when: item.package is defined and item.pipe is not defined
+
+- name: Snap-based installations
+  snap:
+    name: '{{ item.snap }}'
+    classic: yes
+  when: item.snap is defined and item.classic

@@ -1,0 +1,14 @@
+---
+media_packages:
+
+  - name: Common media codecs
+    package: ubuntu-restricted-extras
+
+  - name: Vlc player
+    package: vlc
+
+  - name: Editing tags in audio files
+    package: easytag
+
+  - name: ffmpeg video processing tool
+    package: ffmpeg
