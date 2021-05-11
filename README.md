@@ -8,151 +8,43 @@
     Note: the 2nd option has very high system requirements.
     
 #### Features:
-1. [Prerequisites](#prerequisites)
-2. [Run local Ubuntu Dev Env setup.](#run-local-ubuntu-dev-env-setup)
+1. [Prerequisites](#1-prerequisites)
+2. [Build the Dev Env setup](#2-build-the-dev-env-setup)
 3. [Build virtual Ubuntu Dev Env setup.](#build-virtual-ubuntu-dev-env-setup)
 4. [Manual steps to finish installation.](#manual-steps-to-finish-installation)         
 5. [Configure OpenVPN, clone git repositories](#configure-openvpn-clone-git-repositories)
 
-#### Prerequisites:
+#### 1. Prerequisites:
 
-KeePassXC
+1. [Install required apps and tools.](#11-install-required-apps-and-tools)
+2. [Download the KeePassXC database](#12-the-keepassxc-database)
+3. [Clone the Ansible project](#13-clone-ansible-project)
 
-To install it:
+#### 1.1 Install required apps and tools.
 
-On Windows: download [KeePassXC-2.3.4-Win64-portable.zip](https://drive.google.com/file/d/15w9dJNs50uShOXdpsWAd9zL_vBfuthI_/view?usp=sharing) and install it.
+[Linux Apps](docs/ubuntu.md#11-required-apps-installation)
+[Windows Apps](docs/windows.md#11-required-apps-installation)
 
-On Linux: `sudo apt install keepassxc`
+#### 1.2 The KeePassXC database.
 
-Download the KeePassXC database. 
-You'll need the password for github
-to access the private repository. 
-You can find `savDb.kdbx` file on the Cloud storages.
+Download the KeePassXC database. You can find `savDb.kdbx` file on the Cloud storage.
 
-######  1. Install git on the host box. 
-     
-     [Git for Windows](https://git-scm.com/download/win)
-     
-     On Linux: 
-        ```
-        sudo apt update
-        sudo apt install git-all
-        ```
-     
-######  2. Install SSH client:
-  
-On Linux SSH client is installed by default. On Windows, install it manually:
-     - [Notepad++](https://notepad-plus-plus.org/downloads)
-     - [Putty](https://www.putty.org/)
-  
-######  3. Clone Ansible project
+#### 1.3. Clone Ansible project
    
-  - Generating SSH key for [Private Github](https://github.com/AlexandrSokolov/) account.
-  ```
-  $ ssh-keygen -t rsa -b 4096 -C "${email}" -f /home/${user}/.ssh/id_rsa_github
-  ```
-
-  For instance for `${user}` - `alex` and `${email}` - `sav.public@yandex.com`:
-  ```      
-  $ ssh-keygen -t rsa -b 4096 -C "sav.public@yandex.com" -f /home/alex/.ssh/id_rsa_github
-  $ ls -al ~/.ssh
-  -rw-------  1 alex alex 3243 Nov 11 13:00 id_rsa_github
-  -rw-r--r--  1 alex alex  747 Nov 11 13:00 id_rsa_github.pub
-  ```
-  - Login with `AlexandrSokolov` github account
-      [AlexandrSokolov github account](https://github.com/AlexandrSokolov/)
-
-  - Install `xclip`: 
-    
-    `sudo apt install xclip`
-
-  - Copy ssh key into buffer: 
-    
-    `xclip -sel clip < ~/.ssh/id_rsa_github.pub`
-      
-  - Install the `id_rsa_github.pub` public key into your account:
-      [GitHub SSH keys](https://github.com/settings/ssh)
-      
-  - Test the connection to github (pathphrase will be asked)
-    ```
-    $ ssh -T git@github.com
-    Hi AlexandrSokolov! You've successfully authenticated, but GitHub does not provide shell access.
-    ```    
+On Linux [configure a local system for AlexandrSokolov github account](docs/ubuntu.md#12-configure-local-system-for-alexandrsokolov-github-accounthttpsgithubcomalexandrsokolov)
   - Clone Ansible project (change your working directory to `~/projects/private`)
     ```
     $ mkdir -p ~/projects/private
     $ cd ~/projects/private
-    $ git clone git@github.com:AlexandrSokolov/ansible-projects.git
+    $ git clone git@github.com:AlexandrSokolov/java_dev_environments.git
     ```
 
-##### Prerequisites for local env:
-  Install Ansible: `sudo apt install ansible`
-  
-##### Prerequisites for virtual box env:
+#### 2. Build the Dev Env setup
 
-######  1. Install Vagrant
-  
-      On Windows Box: Download and install [Vagrant](http://www.vagrantup.com/downloads.html).
-       
-      On Linux: `$ sudo apt install vagrant`
-  
-######  2. Install and configure VirtualBox
-  
-     Find which [VirtualBox versions](https://www.vagrantup.com/docs/providers/virtualbox) are supported.
-     
-     Note: **Disable** `Secure Boot` in BIOS before installation. You might meet issues otherwise.
-       
-     Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads) on Windows. 
-      
-     Install VirtualBox on  Linux:
-     ```
-     wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
-     sudo add-apt-repository "deb [arch=amd64] http://download.virtualbox.org/virtualbox/debian $(lsb_release -cs) contrib"
-     sudo apt update && sudo apt install virtualbox-6.1
-     ```
-     See [How to Install VirtualBox on Ubuntu](https://itsfoss.com/install-virtualbox-ubuntu/)
-     
-     Configure `Defualt Machine Folder` of VirtualBox in `File -> Preferences -> General -> Defualt Machine Folder`
+[On Linux](docs/ubuntu.md#2-build-the-dev-env-setup)
+[On Windows](docs/windows.md#2-build-the-dev-env-setup-as-a-virtual-box)
 
-  Note: **DO NOT** install Ansible explicitly.
-  
-#### Run local Ubuntu Dev Env setup  
 
-######  1. Change working directory to the folder with `Vagrant` file
-            
-  ```
-     $ cd ~/projects/private/ansible-projects/java_dev_environments
-     $ ls
-     playbooks  roles  README.md  setGitProjects.sh  TODO.md  Vagrantfile
- ```  
-######  2. Run: 
-`./scripts/localDevEnvironment.sh`   
-     
-#### Build virtual Ubuntu Dev Env setup
-
-######  1. Change working directory to the folder with `Vagrant` file
-            
-     ```
-     $ cd ~/projects/ansible-projects/java_dev_environments
-     $ ls
-     playbooks  roles  README.md  setGitProjects.sh  TODO.md  Vagrantfile
-     ```  
-######  2. Run: 
-    `vagrant up`
-    
-     You might meet issue:
-       ```
-       $ vagrant status
-       ...
-       default                   not created (virtualbox)
-       ...
-       $ vagrant up
-       ...
-       A VirtualBox machine with the name 'Ubuntu Dev Desktop Environment' already exists.
-       ```
-     
-     Run VirtualBox application itself and delete the virtual machine. Then you can run `vagrant up` again. 
-       
 #### Manual steps to finish installation. 
 (see `01_Ubuntu_via_Vagrant_VirtualBox_Ansible_after_installation` in Google Docs)
 
