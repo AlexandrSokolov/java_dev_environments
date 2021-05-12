@@ -6,7 +6,7 @@
 #  playbooks/installDevEnv.yml
 
 ansible localhost -v \
-  --become-user \
+  --become-user root \
   --ask-become-pass \
   --module-name include_role \
   --args "name=ubuntu_dev tasks_from=local_dev" \
