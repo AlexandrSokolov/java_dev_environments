@@ -49,10 +49,17 @@ git_projects:
     git: git@gitlab.dev.brandmaker.com:si/si-commons/sicommonsmaps.git
     path: si/si-commons/siCommonsMaps
 
-  # this project is checked out, as the first step during Ubuntu configartion
-#  - name: Private Ansible Projects
-#    git: git@github.com:AlexandrSokolov/ansible-projects.git
-#    path: private/ansible_projects
+  - name: Private Ansible Projects
+    git: git@github.com:AlexandrSokolov/ansible-projects.git
+    path: private/ansible_projects
+
+  - name: Ansible Project for Jave Enviroment
+    git: git@github.com:AlexandrSokolov/java_dev_environments.git
+    path: private/java_dev_environments
+
+  - name: Ansible Common Roles
+    git: git@github.com:AlexandrSokolov/ansible-commons-roles.git
+    path: private/ansible-commons-roles
 
   - name: Ansible Java Generators
     git: git@github.com:AlexandrSokolov/ansible_java_generators.git
@@ -61,6 +68,14 @@ git_projects:
   - name: Ansible Java BM Generators
     git: git@github.com:AlexandrSokolov/ansible_java_bm_generators.git
     path: private/ansible-java-bm-generators
+
+  - name: Java Logging
+    git: git@github.com:AlexandrSokolov/logging.git
+    path: private/logging
+
+  - name: Java Datasource
+    git: git@github.com:AlexandrSokolov/datasource.git
+    path: private/datasource
 
   - name: Private Maven Archetypes
     git: git@github.com:AlexandrSokolov/savdev-archetype-war.git
