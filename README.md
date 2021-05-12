@@ -157,3 +157,10 @@ $ ls -al ~/.ssh
 ### Private installation steps  
 
 [Ignore it if you are not me:)](docs/private.md#installation-steps-for-my-own-environment)
+
+### Remove the current project
+
+```bash
+cd ~
+rm -rf ~/projects/private/tmp
+```
