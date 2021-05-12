@@ -1,5 +1,5 @@
 
-#### 1.1 Required apps installation
+### Prerequisites
 
 ```bash
 sudo apt update
@@ -8,6 +8,66 @@ sudo apt install git-all
 sudo apt install ansible
 sudo apt install xclip
 ```
+
+### Clone the project
+
+Run from within your home folder:
+```bash
+mkdir -p projects/private/tmp
+cd projects/private/tmp
+git clone https://github.com/AlexandrSokolov/java_dev_environments.git
+cd java_dev_environments
+ls -1
+ansible.cfg
+docs
+playbooks
+README.md
+roles
+scripts
+Vagrantfile
+```
+
+### Build the local environment
+
+Run from within the `java_dev_environments` folder:
+
+```bash
+./scripts/localDevEnvironment.sh
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#### 1.1 The KeePassXC database.
+
+Download the KeePassXC database. You can find `savDb.kdbx` file on the Cloud storage.
+
 
 #### 1.2 Configure local system for [AlexandrSokolov github account](https://github.com/AlexandrSokolov/)
 
@@ -48,9 +108,7 @@ Change the working directory to the folder with the current project:
    $ ls
    playbooks  roles  README.md  setGitProjects.sh  TODO.md  Vagrantfile
 ```  
-Run from within the `java_dev_environments` folder:
 
-`./scripts/localDevEnvironment.sh`  
 
 #### 3. Manual steps to finish installation.
 (see `01_Ubuntu_via_Vagrant_VirtualBox_Ansible_after_installation` in Google Docs)

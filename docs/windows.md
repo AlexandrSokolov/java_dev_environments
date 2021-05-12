@@ -1,5 +1,5 @@
 
-#### 1.1 Required apps installation
+### Prerequisites
 
 Install the following packages via a [`Ninite`](https://ninite.com/) package management system:
 
@@ -22,18 +22,30 @@ Install manually:
 
 Note: **DO NOT** install Ansible explicitly.
 
-#### 2. Build the Dev Env setup as a virtual box:
+### Clone the project 
 
-Change working directory to the `java_dev_environments` folder with `Vagrant` file
+TODO (udpate it for Windows)
 
+Run from within your home folder:
 ```bash
-$ cd ~/projects/ansible-projects/java_dev_environments
-$ ls
-playbooks  roles  README.md  setGitProjects.sh  TODO.md  Vagrantfile
+mkdir -p projects/private/tmp
+cd projects/private/tmp
+git clone https://github.com/AlexandrSokolov/java_dev_environments.git
+cd java_dev_environments
+ls -1
+ansible.cfg
+docs
+playbooks
+README.md
+roles
+scripts
+Vagrantfile
 ```
 
+### Build the dev env inside a virtual box
+
 Run: `vagrant up`
-    
+
 You might meet the issue:
 ```bash
 $ vagrant status
@@ -44,5 +56,6 @@ $ vagrant up
 ...
 A VirtualBox machine with the name 'Ubuntu Dev Desktop Environment' already exists.
 ```
-To solve it run VirtualBox application itself and delete the virtual machine. 
-Then you can run `vagrant up` again. 
+To solve it run VirtualBox application itself and delete the virtual machine.
+Then you can run `vagrant up` again.
+
