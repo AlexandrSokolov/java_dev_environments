@@ -6,7 +6,6 @@
     - "{{ media_packages }}"
     - "{{ dev_ops_packages }}"
     - "{{ dev_packages }}"
-    - "{{ my_sql_packages }}"
 
 - name: Update all packages
   apt: upgrade=yes

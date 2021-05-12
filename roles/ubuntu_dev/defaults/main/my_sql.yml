@@ -1,5 +1,0 @@
----
-my_sql_packages:
-
-  - name: Mysql
-    package: mysql-client
