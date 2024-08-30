@@ -1,21 +1,25 @@
+### not clear if still is needed:
+
+- update-locale LANG=en_US.UTF-8
+- update-locale LC_NUMERIC=de_DE.UTF-8
+- update-locale LC_TIME=de_DE.UTF-8
+- update-locale LC_MONETARY=de_DE.UTF-8
+- update-locale LC_PAPER=de_DE.UTF-8
+- update-locale LC_NAME=de_DE.UTF-8
+- update-locale LC_ADDRESS=de_DE.UTF-8
+- update-locale LC_TELEPHONE=de_DE.UTF-8
+- update-locale LC_MEASUREMENT=de_DE.UTF-8
+- update-locale LC_IDENTIFICATION=de_DE.UTF-8
+- update-locale LANGUAGE=en_US
+
+### 
+
 - readme, $ vagrant plugin install vagrant-disksize
 - run local dev via vagrant
 - only for local, not via vagrant env:
   - name: "LibreOffice - Linux alternative to MS Office"
     package: libreoffice
     - update readme when you do that
-
-- extract java_dev_environment into a separate public repository
-- automate IntelliJ Idea configueration:
-    same as idea64.vmoptions, but in idea.properties
-    https://www.jetbrains.com/help/objc/configuring-file-size-limit.html#file-size-limit
-    include other configurations from: "IntelliJ_IDEA_Configuration"
-    
-    NOTE: instead of copying a an original file and change values in it,
-    you can simplify it by copying files from ansible, 
-    Reason: when we create new custom files,they are empty 
-    as a result -we only need properties that we do wanot to overwrite
-    
 - sublime, add subl link
 - test docker installation
 - you are forced to install docker-compose explicitely, consider how to do it via commands, automatically

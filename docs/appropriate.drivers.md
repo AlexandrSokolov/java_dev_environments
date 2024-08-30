@@ -1,9 +1,9 @@
-### Post installations, specific for local dev environment.
+TODO
 
-1. Install LibreOffice
-```bash
-sudo apt install libreoffice-gnome libreoffice
-```
+### Manual steps to finish installation
+
+(see `01_Ubuntu_via_Vagrant_VirtualBox_Ansible_after_installation` in Google Docs)
+
 
 2. Install a proprietary driver for you GPU.
 

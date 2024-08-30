@@ -1,0 +1,8 @@
+---
+- name: Install packages
+  include_tasks: install_package.yml
+  with_flattened:
+    - "{{ media_packages }}"
+
+- name: Update all packages
+  apt: upgrade=yes

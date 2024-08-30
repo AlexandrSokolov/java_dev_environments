@@ -3,6 +3,6 @@ intellij_idea_options:
   - key: -Xms
     value: 1024m
   - key: -Xmx
-    value: 2048m
+    value: 4096m
   - key: -XX:ReservedCodeCacheSize=  # with "=" sign
     value: 512m

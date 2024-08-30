@@ -1,61 +1,62 @@
 ---
 git_projects:
 
-  - name: Ikea Excel Importer
-    git: git@gitlab.dev.brandmaker.com:si/customer/ikea/ikeaexcelimporter.git
-    path: si/Ikea/IkeaExcelImporter
+  - name: Spring Projects
+    git: git@github.com:AlexandrSokolov/spring_boot_projects.git
+    path: private/spring_boot_projects
 
-  - name: Ikea Store Setup
-    git: git@gitlab.dev.brandmaker.com:si/customer/ikea/storeSetup.git
-    path: si/Ikea/IkeaStoreSetup
+  - name: Java Datasource
+    git: git@github.com:AlexandrSokolov/datasource.git
+    path: private/datasource
 
-  - name: Ikea Pim Importer
-    git: git@gitlab.dev.brandmaker.com:si/customer/ikea/ikeapimimporter.git
-    path: si/Ikea/IkeaPimImporter
+  - name: Java Rest
+    git: git@github.com:AlexandrSokolov/rest.git
+    path: private/rest
 
-  - name: Bm Versions
-    git: git@gitlab.dev.brandmaker.com:bm-product/bm-product-config.git
-    path: bm/bm-product-config
+  - name: Excel
+    git: git@github.com:AlexandrSokolov/excel.git
+    path: private/excel
 
-  - name: Amazon Integration
-    git: git@gitlab.dev.brandmaker.com:si/customer/Amazon/integrations.git
-    path: si/Amazon/AmazonIntegration
+  - name: Pdf Jasper Reports
+    git: git@github.com:AlexandrSokolov/jasper_reports.git
+    path: private/jasper_reports
 
-  - name: Amazon Lemonize Integration
-    git: git@gitlab.dev.brandmaker.com:si/customer/Amazon/lemonize.git
-    path: si/Amazon/AmazonLemonizeIntegration
+  - name: Soap
+    git: git@github.com:AlexandrSokolov/soap.git
+    path: private/soap
 
-  - name: Amazon Order Updater
-    git: git@gitlab.dev.brandmaker.com:si/customer/Amazon/orderupdater.git
-    path: si/Amazon/AmazonOrderUpdater
+  - name: Front End projects
+    git: git@github.com:AlexandrSokolov/frontend.git
+    path: private/frontend
 
-  - name: Amazon Techname Updater
-    git: git@gitlab.dev.brandmaker.com:si/customer/Amazon/technameupdater.git
-    path: si/Amazon/AmazonTechNameUpdater
+  - name: WildFly
+    git: git@github.com:AlexandrSokolov/wildfly_mgmt.git
+    path: private/wildfly_mgmt
 
-  - name: Qumu Mp Connector
-    git: git@gitlab.dev.brandmaker.com:si/customer/Bayer/bayer_ag_oox-dah-oxs/qumumiconnector.git
-    path: si/Bayer/QumuMpConnector
+  - name: Bash and system scripts and commands
+    git: git@github.com:AlexandrSokolov/bash_scripts.git
+    path: private/bash_scripts
 
-  - name: SI Commons Rest Client
-    git: git@gitlab.dev.brandmaker.com:si/si-commons/rest_client.git
-    path: si/si-commons/siCommonsRestClient
+  - name: ReadMe formatting
+    git: git@github.com:AlexandrSokolov/readme_formatting.git
+    path: private/readme_formatting
 
-  - name: SI Commons Ops
-    git: git@gitlab.dev.brandmaker.com:si/si-commons/siCommonsOps.git
-    path: si/si-commons/siCommonsOps
+  - name: Git Docs
+    git: git@github.com:AlexandrSokolov/git_docs.git
+    path: private/git_docs
 
-  - name: SI Commons MAPS
-    git: git@gitlab.dev.brandmaker.com:si/si-commons/sicommonsmaps.git
-    path: si/si-commons/siCommonsMaps
+  - name: Maven Configurations
+    git: git@github.com:AlexandrSokolov/maven_projects_and_configs.git
+    path: private/maven_projects_and_configs
 
+  - name: Async Demo
+    git: git@github.com:AlexandrSokolov/async-demo.git
+    path: private/async_demo
+
+##############################################
   - name: Private Ansible Projects
     git: git@github.com:AlexandrSokolov/ansible-projects.git
     path: private/ansible_projects
-
-  - name: Ansible Project for Jave Enviroment
-    git: git@github.com:AlexandrSokolov/java_dev_environments.git
-    path: private/java_dev_environments
 
   - name: Ansible Common Roles
     git: git@github.com:AlexandrSokolov/ansible-commons-roles.git
@@ -69,14 +70,6 @@ git_projects:
     git: git@github.com:AlexandrSokolov/ansible_java_bm_generators.git
     path: private/ansible-java-bm-generators
 
-  - name: Java Logging
-    git: git@github.com:AlexandrSokolov/logging.git
-    path: private/logging
-
-  - name: Java Datasource
-    git: git@github.com:AlexandrSokolov/datasource.git
-    path: private/datasource
-
   - name: Private Maven Archetypes
     git: git@github.com:AlexandrSokolov/savdev-archetype-war.git
     path: private/savdev-archetype-war
@@ -84,6 +77,249 @@ git_projects:
   - name: Private JaxRs Project
     git: git@github.com:AlexandrSokolov/jax_rs.git
     path: private/jax_rs
+
+################ demo and examples
+
+  - name: Bm Auth Demo
+    git: git@gitlab.dev.brandmaker.com:si/demo/bm_auth.git
+    path: si/demo/bm_auth
+
+  - name: Bm Db Rest Service
+    git: git@gitlab.dev.brandmaker.com:si/demo/db_rest_service.git
+    path: si/demo/db_rest_service
+
+  - name: Bm Rest Client
+    git: git@gitlab.dev.brandmaker.com:si/demo/rest_client.git
+    path: si/demo/rest_client
+
+  - name: Bm Rest Service
+    git: git@gitlab.dev.brandmaker.com:si/demo/rest_service.git
+    path: si/demo/rest_service
+
+  - name: Bm Auth Example
+    git: git@gitlab.dev.brandmaker.com:si/dev-examples/cs-rest-auth.git
+    path: si/dev-examples/cs-rest-auth
+
+  - name: Bm Rest Service Example
+    git: git@gitlab.dev.brandmaker.com:si/dev-examples/cs-rest-service-example.git
+    path: si/dev-examples/cs-rest-service-example
+
+################ si commons
+
+  - name: Si Commmons Rest Client
+    git: git@gitlab.dev.brandmaker.com:si/si-commons/rest_client.git
+    path: si/si-commons/rest_client
+
+  - name: Si Commmons Bm Auth
+    git: git@gitlab.dev.brandmaker.com:si/si-commons/csCommonsBmAuth.git
+    path: si/si-commons/csCommonsBmAuth
+
+  - name: Si Commmons Media Pool
+    git: git@gitlab.dev.brandmaker.com:si/si-commons/sicommonsmediapoolrest.git
+    path: si/si-commons/siCommonsMediaPool
+
+  - name: Si Commmons Dse
+    git: git@gitlab.dev.brandmaker.com:si/si-commons/sicommonsdse.git
+    path: si/si-commons/siCommonsDse
+
+  - name: Si Commmons Maps
+    git: git@gitlab.dev.brandmaker.com:si/si-commons/sicommonsmaps.git
+    path: si/si-commons/siCommonsMaps
+
+  - name: Si Commmons Portal and Configuration
+    git: git@gitlab.dev.brandmaker.com:si/si-commons/sicommonsconfiguration.git
+    path: si/si-commons/siCommonsConfiguration
+
+  - name: Si Commmons File Uploader
+    git: git@gitlab.dev.brandmaker.com:si/si-commons/csCommonsFileUploader.git
+    path: si/si-commons/csCommonsFileUploader
+
+  - name: Si Commmons Review Manager
+    git: git@gitlab.dev.brandmaker.com:si/si-commons/csCommonsReviewManager.git
+    path: si/si-commons/csCommonsReviewManager
+
+  - name: Si Commmons Email
+    git: git@gitlab.dev.brandmaker.com:si/si-commons/sicommonsemail.git
+    path: si/si-commons/siCommonsEmail
+
+  - name: Si Commmons Config
+    git: git@gitlab.dev.brandmaker.com:si/si-commons/cscommonsconfig.git
+    path: si/si-commons/csCommonsConfig
+
+  - name: Si Commmons Soap
+    git: git@gitlab.dev.brandmaker.com:si/si-commons/siCommonsSoap.git
+    path: si/si-commons/siCommonsSoap
+
+  - name: Si Commmons Media Pool Soap
+    git: git@gitlab.dev.brandmaker.com:si/si-commons/siCommonsMediaPoolSoap.git
+    path: si/si-commons/siCommonsMediaPoolSoap
+
+  - name: Si Commmons Maven Bom
+    git: git@gitlab.dev.brandmaker.com:si/si-commons/si-commons-maven.git
+    path: si/si-commons/siCommonsMaven
+
+  - name: Si Commmons Build Info Plugin
+    git: git@gitlab.dev.brandmaker.com:si/si-commons/si-commons-maven-build-info-plugin.git
+    path: si/si-commons/si-commons-maven-build-info-plugin
+
+  - name: SI Commons Ops
+    git: git@gitlab.dev.brandmaker.com:si/si-commons/siCommonsOps.git
+    path: si/si-commons/siCommonsOps
+
+############### si tools and utils
+
+  - name: Si Maps Importer
+    git: git@gitlab.dev.brandmaker.com:si/tools/maps-importer.git
+    path: si/tools/maps-importer
+
+  - name: Si Free Fields -> Custom Attributes Converter
+    git: git@gitlab.dev.brandmaker.com:si/tools/mp-ff2ca-converter.git
+    path: si/tools/mp-ff2ca-converter
+
+  - name: Si Budget Data Snapshoter
+    git: git@gitlab.dev.brandmaker.com:si/tools/budget-data-snapshoter.git
+    path: si/tools/budget-data-snapshoter
+
+  - name: Si Maven Deps Analyses among all git projects
+    git: git@gitlab.dev.brandmaker.com:si/utils/mvn-deps-analyses.git
+    path: si/utils/mvn-deps-analyses
+
+################ si customers
+
+  - name: Amazon Integration
+    git: git@gitlab.dev.brandmaker.com:si/customer/Amazon/integrations.git
+    path: si/customer/Amazon/AmazonIntegration
+
+  - name: AT&T Estimation Job Populator
+    git: git@gitlab.dev.brandmaker.com:si/customer/at-t/att_estimation_job_populator.git
+    path: si/customer/AT_T/att_estimation_job_populator
+
+  - name: Brita Media Pool Updater
+    git: git@gitlab.dev.brandmaker.com:si/customer/Brita/media-pool-metadata-updater.git
+    path: si/customer/Brita/media-pool-metadata-updater
+
+  - name: Deka Permission Handler
+    git: git@gitlab.dev.brandmaker.com:si/customer/Deka/deka-permission-handler.git
+    path: si/customer/Deka/deka-permission-handler
+
+  - name: Deka Custom Context Menu
+    git: git@gitlab.dev.brandmaker.com:si/customer/Deka/deka-custom-context-menu.git
+    path: si/customer/Deka/deka-custom-context-menu
+
+  - name: Deka new Dim
+    git: git@gitlab.dev.brandmaker.com:si/customer/Deka/deka-dim.git
+    path: si/customer/Deka/deka-dim
+
+  - name: Deka deka-import-manager (old)
+    git: git@gitlab.dev.brandmaker.com:si/customer/Deka/deka-import-manager.git
+    path: si/customer/Deka/deka-import-manager
+
+  - name: Deka Publishing Webhooks
+    git: git@gitlab.dev.brandmaker.com:si/customer/Deka/spread-publishing-webhooks.git
+    path: si/customer/Deka/spread-publishing-webhooks
+
+  - name: DeuBa plugins
+    git: git@gitlab.dev.brandmaker.com:si/customer/DeuBa/plugins.git
+    path: si/customer/DeuBa/deuba_plugins
+
+  - name: Ikea custom-context-menu
+    git: git@gitlab.dev.brandmaker.com:si/customer/ikea/custom-context-menu.git
+    path: si/customer/Ikea/custom-context-menu
+
+  - name: Ikea Csv Transformer
+    git: git@gitlab.dev.brandmaker.com:si/customer/ikea/ikea-csv-transfer.git
+    path: si/customer/Ikea/ikea-csv-transfer
+
+  - name: Ikea Bm Fusion
+    git: git@gitlab.dev.brandmaker.com:si/customer/ikea/ikea-bm-fusion.git
+    path: si/customer/Ikea/ikea-bm-fusion
+
+  - name: Ikea Excel Importer
+    git: git@gitlab.dev.brandmaker.com:si/customer/ikea/ikeaexcelimporter.git
+    path: si/customer/Ikea/ikeaExcelImporter
+
+  - name: Ikea Excel Grid Importer
+    git: git@gitlab.dev.brandmaker.com:si/customer/ikea/ikea-excel-grid-importer.git
+    path: si/customer/Ikea/ikea-excel-grid-importer
+
+  - name: Ikea Pim Importer
+    git: git@gitlab.dev.brandmaker.com:si/customer/ikea/ikeapimimporter.git
+    path: si/customer/Ikea/IkeaPimImporter
+
+  - name: Ikea Fux Maps
+    git: git@gitlab.dev.brandmaker.com:si/customer/ikea/ikea-fux-maps.git
+    path: si/customer/Ikea/ikea-fux-maps
+
+  - name: Ikea ikea-users-anonymizer
+    git: git@gitlab.dev.brandmaker.com:si/customer/ikea/ikea-users-anonymizer.git
+    path: si/customer/Ikea/ikea-users-anonymizer
+
+  - name: Ikea Store Setup
+    git: git@gitlab.dev.brandmaker.com:si/customer/ikea/storeSetup.git
+    path: si/customer/Ikea/ikeaStoreSetup
+
+  - name:  Thalia dimension-importer
+    git: git@gitlab.dev.brandmaker.com:si/customer/Thalia/dimension-importer.git
+    path: si/customer/Thalia/dimension-importer
+
+  - name:  Tpv tpv-pr-import
+    git: git@gitlab.dev.brandmaker.com:si/customer/tpv/tpv-pr-import.git
+    path: si/customer/Tpv/tpv-pr-import
+
+  - name:  VW assets_approval_report
+    git: git@gitlab.dev.brandmaker.com:si/customer/vw/assets_approval_report.git
+    path: si/customer/VW/assets_approval_report
+
+  - name:  VW vw-aem-connector
+    git: git@gitlab.dev.brandmaker.com:si/customer/vw/vw-aem-connector.git
+    path: si/customer/VW/vw-aem-connector
+
+###### BM Standard Product
+
+  - name: Bm Audit
+    git: git@gitlab.dev.brandmaker.com:portal/microservice/audit.git
+    path: bm/audit
+
+  - name: Bm Auth
+    git: git@gitlab.dev.brandmaker.com:portal/module/auth.git
+    path: bm/auth
+
+  - name: Bm Settings
+    git: git@gitlab.dev.brandmaker.com:portal/module/settings.git
+    path: bm/settings
+
+  - name: Bm Product Config and Versions
+    git: git@gitlab.dev.brandmaker.com:bm-product/bm-product-config.git
+    path: bm/bm-product-config
+
+  - name: Bm Utils
+    git: git@gitlab.dev.brandmaker.com:portal/utils/bm-utils.git
+    path: bm/bm-utils
+
+  - name: Bm Dse Api
+    git: git@gitlab.dev.brandmaker.com:mrm/api.git
+    path: bm/dse_api
+
+  - name: Bm MediaPoolWebHookConsumer
+    git: https://github.com/brandmaker/MediaPoolWebHookConsumer.git
+    path: bm/MediaPoolWebHookConsumer
+
+#### Clone them manually:
+#  - name: Bm Dse
+#    git: git@gitlab.dev.brandmaker.com:mrm/dse.git
+#    path: bm/dse
+#
+#  - name: Bm Dse Web
+#    git: git@gitlab.dev.brandmaker.com:mrm/dse-web.git
+#    path: bm/dse_web
+#
+#  - name: Bm Maps
+#    git: git@gitlab.dev.brandmaker.com:maps/maps.git
+#    path: bm/maps
+
+
+
+
 
 
 

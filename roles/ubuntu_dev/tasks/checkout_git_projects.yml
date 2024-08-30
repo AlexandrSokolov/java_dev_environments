@@ -1,11 +1,3 @@
----
-- name: Copy ssh config
-  copy:
-    src: files/git.config
-    dest: "/home/{{user}}/.ssh/config"
-    owner: "{{user}}"
-    group: "{{user}}"
-
 - name: Create directory structure if they don't exist
   file:
     path: "/home/{{user}}/projects/{{ item.path }}"
