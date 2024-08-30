@@ -205,6 +205,23 @@ Notes:
     sudo update-alternatives --config mvn
     ```
 
+### [Install Docker](https://docs.docker.com/engine/install/ubuntu/)
+
+See also:
+[Linux post-installation steps for Docker Engine](https://docs.docker.com/engine/install/linux-postinstall/)
+
+Note: everything from official documentation is included into [`addDocker.sh`](../scripts/addDocker.sh)
+
+To install docker, run:
+```bash
+./scripts/addDocker.sh
+```
+
+Check Docker installation:
+```bash
+docker run hello-world
+```
+
 ### [Configure OpenVpn and multiple git repositories support](vpn.and.git.configuration.md)
 
 ### Clone git projects, if you haven't copied them from the old system
