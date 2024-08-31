@@ -1,3 +1,8 @@
+### Intelli Idea Code style settings
+
+Save and export into file
+Describe in GUI and with code examples
+
 ### not clear if still is needed:
 
 - update-locale LANG=en_US.UTF-8
