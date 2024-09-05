@@ -52,9 +52,9 @@ system_packages:
   - name: Gnome screenshot (alternative to 'Shutter')
     package: gnome-screenshot
 
-  # probably not needed anymore, because we can make video recording with `gnome-screenshot`
-  # - name: Kazam Screen Recorder
-  #  package: kazam
+  # alternative option - `gnome-screenshot`, much much worse
+  - name: Kazam Screen Recorder
+    package: kazam
 
   - name: Sublime Text Editor
     package: sublime-text

@@ -99,6 +99,29 @@ These configuration is useful in all box environments.
       - Choose English
       - Save/Speichern
 
+### Check `kazam` record screen tool
+
+If you get a black screen when try to record with kazam, try the following solutions:
+1. In `/etc/gdm3/custom.conf` file comment out the following line:
+    ```properties
+    [daemon]
+    # Uncomment the line below to force the login screen to use Xorg
+    WaylandEnable=false
+    ```
+2. [Screencast only records a black box:](https://askubuntu.com/a/1177775/458132)
+    - Save your files and log out of your account.
+    - Go to log in normally, but do not click sign in. Instead, click the gear beside the sign in button.
+    - Select either Ubuntu if you also see `Ubuntu on Wayland` as an option, or `Ubuntu on XORG.` 
+   Note: in my case I switched to `Ubuntu on XORG.`
+
+Alternative to `kazam` - `green-recorder`:
+```bash
+sudo add-apt-repository ppa:fossproject/ppa
+sudo apt update
+sudo apt install green-recorder
+green-recorder
+```
+
 ### Install LibreOffice (only locally, not on the virtual box)
 
 ```bash
