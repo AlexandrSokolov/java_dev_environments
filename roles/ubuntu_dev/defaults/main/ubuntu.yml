@@ -52,6 +52,9 @@ system_packages:
   - name: Gnome screenshot (alternative to 'Shutter')
     package: gnome-screenshot
 
+  - name: Graphical editor for gsettings and dconf
+    package: dconf-editor
+
   # alternative option - `gnome-screenshot`, much much worse
   - name: Kazam Screen Recorder
     package: kazam

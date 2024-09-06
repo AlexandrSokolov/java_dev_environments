@@ -99,6 +99,12 @@ These configuration is useful in all box environments.
       - Choose English
       - Save/Speichern
 
+### Disable "recent files" folder (optional)
+
+- Run: `dconf-editor`
+- navigate to `org->gnome->desktop->privacy`
+- uncheck the `remember-recent-files` key
+
 ### Check `kazam` record screen tool
 
 If you get a black screen when try to record with kazam, try the following solutions:
