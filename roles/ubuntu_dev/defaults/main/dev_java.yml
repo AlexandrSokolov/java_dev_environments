@@ -14,3 +14,7 @@ dev_packages:
   - name: VisualVM
     package: visualvm
 
+  - name: MySql client
+    package: mysql-client
+
+
